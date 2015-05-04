@@ -8,7 +8,7 @@ angular.module('facebook')
   .then(function(response){
     $scope.user = response.data;
     $scope.user.birthday = new Date(response.data.birthday);
-    delete response.data._id;
+    delete response.data._id;   //delete is a vanilla javascript method
     delete response.data.uid;
     delete response.data.__v;
     delete response.data.createdAt;
